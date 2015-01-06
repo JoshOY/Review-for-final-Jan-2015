@@ -4,6 +4,6 @@ midpoint_rule <- function(func_expression, a, b, ksi = NA) {
 	}
 	func <- deriv(func_expression)
 	ddfunc <- attr(func(ksi), 'hessian')
-	rtn <- ((b - a) ^ 3) * ddfunc / 12
+	rtn <- ((b - a) ^ 3) * ddfunc / 24
 	rtn
 }
